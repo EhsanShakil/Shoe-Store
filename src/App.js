@@ -6,18 +6,21 @@ import Home from "./Components/Screens/Home";
 import Store from "./Components/Screens/Store";
 import Login from "./Components/Screens/Login";
 import SignUp from "./Components/Screens/SignUp";
+import GlobalProvider from "./Components/GlobalContext/GlobalState";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/store" component={Store} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={SignUp} />
-      </Switch>
-    </BrowserRouter>
+    <GlobalProvider>
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/store" component={Store} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={SignUp} />
+        </Switch>
+      </BrowserRouter>
+    </GlobalProvider>
   );
 }
 

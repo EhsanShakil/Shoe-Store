@@ -4,8 +4,7 @@ import withAutoplay from "react-awesome-slider/dist/autoplay";
 import "react-awesome-slider/dist/styles.css";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 import "../../App.css";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
+import Footer from "../Screens/Footer";
 
 const Home = () => {
   const mensshoes1 = require("../../Slider-Images/1.png");
@@ -82,6 +81,7 @@ const Home = () => {
           <img className="clientImage" src={ourclient5} />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

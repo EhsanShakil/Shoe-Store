@@ -24,6 +24,8 @@ body {
   justify-content: center;
   margin: 50px;
   color: white;
+
+  height: 100vh;
 }
 .product {
   border: 5px solid white;
@@ -54,4 +56,29 @@ body {
 .clientImage {
   border-radius: 100%;
   width: 150px;
+}
+.footer {
+  margin-top: 30px;
+  background-color: #18191a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+}
+.store {
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 980px) {
+  .ourproducts {
+    flex-wrap: wrap;
+  }
+  .product {
+    margin-bottom: 20px;
+  }
+  .clients {
+    flex-wrap: wrap;
+  }
 }
