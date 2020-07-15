@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext } from "react";
 
 export const GlobalContext = createContext();
 
@@ -15,7 +15,7 @@ const GlobalProvider = ({ children }) => {
   const kidsshoes2 = require("../../Slider-Images/6.png");
   const kidsshoes3 = require("../../Slider-Images/9.png");
 
-  let [products, setProducts] = useState([
+  const products = [
     {
       id: 1,
       image: mensshoes1,
@@ -70,11 +70,9 @@ const GlobalProvider = ({ children }) => {
       description: "Kids Shoe",
       price: "$29.99",
     },
-  ]);
+  ];
   return (
-    <GlobalContext.Provider value={[products, setProducts]}>
-      {children}
-    </GlobalContext.Provider>
+    <GlobalContext.Provider value={products}>{children}</GlobalContext.Provider>
   );
 };
 
