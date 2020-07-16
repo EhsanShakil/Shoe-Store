@@ -78,7 +78,7 @@ const Store = () => {
       <div className="store">
         {shoes.map((products, index) => (
           <li key={index}>
-            <Card style={{ width: "22rem" }}>
+            <Card style={{ width: "21rem" }}>
               <Card.Img
                 variant="top"
                 src={products.image}
