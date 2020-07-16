@@ -82,6 +82,7 @@ body {
 }
 .productImage {
   display: flex;
+  flex-wrap: wrap;
   width: 450px;
   height: 500px;
   border: 10px solid white;
