@@ -1,7 +1,5 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
-import Footer from "./Footer";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const mensshoes1 = require("../../Slider-Images/1.png");
 const mensshoes2 = require("../../Slider-Images/4.png");
@@ -72,39 +70,15 @@ const shoes = [
   },
 ];
 
-const Store = () => {
+const StoreDetails = () => {
+  const { id } = useParams();
+  let shoe = shoes[id];
+  console.log(shoe);
   return (
-    <>
-      <div className="store">
-        {shoes.map((products, index) => (
-          <li key={index}>
-            <Card style={{ width: "22rem" }}>
-              <Card.Img
-                variant="top"
-                src={products.image}
-                alt={products.description}
-              />
-              <Card.Body>
-                <Card.Title>
-                  <Link to={`/store/${products.id}`}>
-                    <h3>{products.description}</h3>
-                  </Link>
-                </Card.Title>
-                <Card.Text>
-                  <h3>
-                    Price: <span>{products.price}</span>
-                  </h3>
-                  <p>{products.descrip}</p>
-                </Card.Text>
-                <Button variant="primary">ADD TO CARD</Button>
-              </Card.Body>
-            </Card>
-          </li>
-        ))}
-      </div>
-      <Footer />
-    </>
+    <div>
+      <img src={shoe.image} alt={shoe.description} />
+    </div>
   );
 };
 
-export default Store;
+export default StoreDetails;

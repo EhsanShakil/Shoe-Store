@@ -74,11 +74,11 @@ const Home = () => {
       <div>
         <h1 className="productHeading">Our Clients</h1>
         <div className="clients">
-          <img className="clientImage" src={ourclient1} />
-          <img className="clientImage" src={ourclient2} />
-          <img className="clientImage" src={ourclient3} />
-          <img className="clientImage" src={ourclient4} />
-          <img className="clientImage" src={ourclient5} />
+          <img className="clientImage" src={ourclient1} alt="client" />
+          <img className="clientImage" src={ourclient2} alt="client " />
+          <img className="clientImage" src={ourclient3} alt="client " />
+          <img className="clientImage" src={ourclient4} alt="client " />
+          <img className="clientImage" src={ourclient5} alt="client " />
         </div>
       </div>
       <Footer />
