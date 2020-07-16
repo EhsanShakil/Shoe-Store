@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const mensshoes1 = require("../../Slider-Images/1.png");
 const mensshoes2 = require("../../Slider-Images/4.png");
@@ -75,8 +76,15 @@ const StoreDetails = () => {
   let shoe = shoes[id];
   console.log(shoe);
   return (
-    <div>
-      <img src={shoe.image} alt={shoe.description} />
+    <div className="productDetail">
+      <div>
+        <img className="productImage" src={shoe.image} alt={shoe.description} />
+      </div>
+      <div className="productDescription">
+        <h1>{shoe.description}</h1>
+        <h1>{shoe.price}</h1>
+        <Button variant="primary">ADD TO CARD</Button>
+      </div>
     </div>
   );
 };
